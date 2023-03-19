@@ -1,0 +1,61 @@
+#tui-pagination-container {
+  z-index: 1;
+  height: 100%;
+  margin-bottom: 40px;
+  margin-top: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+
+  .tui-page-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: inherit;
+
+    &:hover {
+      border-radius: 5px;
+      background-color: inherit;
+    }
+
+    &.tui-is-selected {
+      width: 40px;
+      height: 40px;
+      color: $main-title-color;
+      background-color: $main-accent-color;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  .tui-prev,
+  .tui-next {
+    width: 35px;
+    height: 35px;
+    filter: brightness(2);
+    border-radius: 5px;
+    color: inherit;
+
+    &:hover {
+      filter: brightness(3);
+    }
+  }
+
+  .tui-first,
+  .tui-last,
+  .tui-ico-ellip {
+    filter: brightness(2);
+
+    &:hover {
+      filter: brightness(3);
+    }
+  }
+}

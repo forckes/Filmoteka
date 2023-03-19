@@ -1,0 +1,166 @@
+.cards__container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.cards__list {
+  @media screen and (min-width: 768px) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 16px;
+  }
+}
+
+.movie__card {
+  position: relative;
+  width: 280px;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(1.015);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+}
+
+.movie__cover {
+  border-radius: 5px;
+  height: 398px;
+  width: 280px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 2px -2px 20px -4px rgb(38, 38, 38);
+  }
+  @media screen and (min-width: 768px) {
+    height: 455px;
+    width: 336px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 574px;
+    width: 394px;
+  }
+}
+// .movie__card > img {
+//   border-radius: 5px;
+
+//   // border-top-right-radius: 5px;
+//   // border-top-left-radius: 5px;
+//   &:hover,
+//   &:focus {
+//     box-shadow: 1px -1px 40px -4px rgba(171, 171, 171, 1);
+//   }
+// }
+.movie__card:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .movie__card:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
+.movie__info {
+  padding-top: 8px;
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 12px;
+  }
+}
+
+.movie__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  // color: $secondary-title-color;
+  color: inherit;
+  text-transform: uppercase;
+  text-align: start;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.movie__category {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $main-accent-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+.movie__category::after {
+  content: ' | ';
+  margin-right: 5px;
+}
+
+.movie__item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.movie__year {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $main-accent-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.movie__average {
+  box-shadow: 2px 2px 10px 2px rgb(252, 251, 251);
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  margin-left: 9px;
+  background-color: $main-accent-color;
+  border-radius: 5px;
+  color: $main-title-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-style: medium;
+    font-size: 20px;
+  }
+}

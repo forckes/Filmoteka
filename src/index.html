@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Filmoteka</title>
-	<!-- favicon -->
-	<link type="image/x-icon" href="./images/icons-3d-glasses-favicon.png" rel="shortcut icon" />
-	<link type="Image/x-icon" href="./images/icons-3d-glasses-favicon.png" rel="icon" />
-	<!-- modern-normalize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-		integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<!-- styles -->
-	<link rel="stylesheet" href="./sass/main.scss" />
-	<script type="module" src="./index.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pink glasses</title>
+  <!-- favicon -->
+  <link type="image/x-icon" href="./images/icons-3d-glasses-favicon.png" rel="shortcut icon" />
+  <link type="Image/x-icon" href="./images/icons-3d-glasses-favicon.png" rel="icon" />
+  <!-- modern-normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- styles -->
+  <link rel="stylesheet" href="./sass/main.scss" />
+  <script type="module" src="./index.js"></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<include src="./partials/page-header.html"></include>
-		<main>
-			<include src="./partials/film-cards.html"></include>
-		</main>
-	</div>
+  <include src="./partials/loader.html"></include>
+  <div class="wrapper">
+    <!-- partials -->
+    <include src="./partials/page-header.html"></include>
+    <div class="main">
+      <include src="./partials/cards-container.html"></include>
+      <include src="./partials/filter.html"></include>
+      <include src="./partials/modal-movie.html"></include>
+      <include src="./partials/pagination.html"></include>
+      <include src="./partials/back-to-top-btn.html"></include>
+      <include src="./partials/settings.html"></include>
+    </div>
+    <include src="./partials/page-footer.html"></include>
+  </div>
 </body>
 
 </html>
